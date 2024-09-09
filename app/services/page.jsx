@@ -8,25 +8,25 @@ const services = [
   {
     num: "01",
     title: "Web Development",
-    description: "lores ipsum",
+    description: " Building responsive, dynamic websites with modern front-end and back-end technologies.",
     href:"",
   },
   {
     num: "02",
     title: "UI/UX Design",
-    description: "lores ipsum",
+    description: "Optimizing websites to boost visibility and organic search rankings.",
     href:"",
   },
   {
     num: "03",
     title: "Adobe Illustrator",
-    description: "lores ipsum",
+    description: "Crafting sleek, vector-based graphics for digital and print media.",
     href:"",
   },
   {
     num: "04",
     title: "SEO",
-    description: "lores ipsum",
+    description: "Designing intuitive, user-centered interfaces for a seamless experience.",
     href:"",
   },
 ]
@@ -46,7 +46,7 @@ const Services = () => {
                   <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>
                     {service.num}
                   </div>
-                  <Link href={service.href} 
+                  <Link href={service.href} target='blank' 
                     className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'>
                     <BsArrowDownRight className='text-primary text-3xl'/>
                   </Link>

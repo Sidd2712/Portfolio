@@ -5,6 +5,9 @@ import { Textarea } from '@/components/ui/textarea';
 import React from 'react';
 import {Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue} from '@/components/ui/select'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import axios from 'axios';
+
 
 const info=[
   {
@@ -17,31 +20,102 @@ const info=[
     title:"Mail",
     description:"siddharth.2727goyal@gmail.com",
   },
-  {
-    icon:<FaPhoneAlt/>,
-    title:"Phone",
-    description:"(+91) 8000609851",
-  },
+  // {
+  //   icon:<FaPhoneAlt/>,
+  //   title:"Phone",
+  //   description:"(+91) 8000609851",
+  // },
 ];
 
 import {motion} from 'framer-motion'
 
 const Contact = () => {
+  // async function handleSubmit(event) {
+  //   event.preventDefault();
+  //   const formData = new FormData(event.target);
+  
+  //   formData.append("access_key", "3f3c0804-a538-4673-925d-c32b661b0feb");
+  
+  //   const object = Object.fromEntries(formData);
+  //   const json = JSON.stringify(object);
+  
+  //   try {
+  //     const response = await fetch("https://api.web3forms.com/submit", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json"
+  //       },
+  //       body: json
+  //     });
+  
+  //     if (!response.ok) {
+  //       // If the response status is not 2xx, throw an error
+  //       throw new Error(`HTTP error! status: ${response.status}`);
+  //     }
+  
+  //     const result = await response.json();
+  
+  //     if (result.success) {
+  //       console.log("Form submitted successfully:", result);
+  //     } else {
+  //       console.log("Form submission failed:", result);
+  //     }
+  //   } catch (error) {
+  //     console.error("There was an error submitting the form:", error);
+  //   }
+  // }
+  const initialFormData = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSelectChange = (value) => {
+    setFormData({
+      ...formData,
+      service: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e?.preventDefault();
+    console.log('form data: ', formData)
+    try {
+      const response = await axios.post('http://localhost:5000/submit', formData);
+      alert('Form submitted successfully');
+      setFormData(initialFormData);
+    } catch (error) {
+      alert('Failed to submit the form');
+    }
+  };
   return (
     <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:2.4, duration:0.4, ease:"easeIn"}}} className='py-6'>
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row gap-[30px]'>
           <div className='xl:w-[54%] order-2 xl:order-none'>
-            <form action="\" className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'>
+            <form action="\" className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl' onSubmit={handleSubmit}>
               <h3 className='text-4xl text-accent'>Let&apos;s work together</h3>
               <p className='text-white/60'>lores ipsum generator as a sdgl alsdlghd lh</p>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <Input type='firstName' placeholder="Firstname"/>
-                <Input type='lastName' placeholder="Lastname"/>
-                <Input type='email' placeholder="Email"/>
-                <Input type='phone' placeholder="Phone Number"/>
+                <Input type="text" name='firstName' placeholder="Firstname" value={formData.firstName} onChange={handleChange}/>
+                <Input type="text" name='lastName' placeholder="Lastname" value={formData.lastName} onChange={handleChange}/>
+                <Input name='email' type="text" placeholder="Email" value={formData.email} onChange={handleChange}/>
+                <Input name='phone' type="text" placeholder="Phone Number" value={formData.phone} onChange={handleChange}/>
               </div>
-              <Select>
+              <Select onValueChange={handleSelectChange} value={formData.service}>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="select a service"/>
                 </SelectTrigger>
@@ -55,8 +129,8 @@ const Contact = () => {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              <Textarea className="h-[200px]" placeholder="Type your message here." />
-              <Button size="md" className="max-w-40">Send Message</Button>
+              <Textarea className="h-[200px]" placeholder="Type your message here." name="message" value={formData.message} onChange={handleChange}/>
+              <Button size="md" className="max-w-40" type="Submit">Send Message</Button>
             </form>
           </div>
           <div className='flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'>

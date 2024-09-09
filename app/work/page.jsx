@@ -14,7 +14,7 @@ const projects=[
     num:'01',
     category:'frontend',
     title: 'Rock, Paper and Scisors',
-    description:'html, css, javascript',
+    description:'',
     stack:[{name:"HTML5"}, {name:"CSS 3"}, {name:"Javascript"},],
     image:'/assets/work/thumb1.png',
     live:"",
@@ -23,12 +23,12 @@ const projects=[
   {
     num:'02',
     category:'frontend',
-    title: 'Rock, Paper and Scisors',
-    description:'html, css, javascriptasdf',
-    stack:[{name:"HTML5"}, {name:"CSS 3"}, {name:"Javascript"},],
+    title: 'Amazon Clone',
+    description:'',
+    stack:[{name:"ReactJs"}, {name:"NodeJs"}, {name:"Firebase"},],
     image:'/assets/work/thumb1.png',
-    live:"",
-    github:""
+    live:"https://clone-16a98.web.app/",
+    github:"https://github.com/Sidd2712/Amazon-Clone"
   },
   {
     num:'03',

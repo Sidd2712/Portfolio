@@ -20,11 +20,11 @@ const info=[
     title:"Mail",
     description:"siddharth.2727goyal@gmail.com",
   },
-  // {
-  //   icon:<FaPhoneAlt/>,
-  //   title:"Phone",
-  //   description:"(+91) 8000609851",
-  // },
+  {
+    icon:<FaMapMarkedAlt/>,
+    title:"Address",
+    description:"ABV-IIITM Gwalior",
+  },
 ];
 
 import {motion} from 'framer-motion'

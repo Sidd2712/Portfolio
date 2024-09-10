@@ -13,30 +13,30 @@ const projects=[
   {
     num:'01',
     category:'frontend',
-    title: 'Rock, Paper and Scisors',
-    description:'',
-    stack:[{name:"HTML5"}, {name:"CSS 3"}, {name:"Javascript"},],
-    image:'/assets/work/thumb1.png',
+    title: 'Your Store Kiosk',
+    description:'A smart in-store shopping solution where users can create a shopping list, receive aisle numbers via email, and manage a wishlist. Built to enhance the future of retail, it enables faster in-store navigation and checkout, ensuring quicker and more efficient services.',
+    stack:[{name:"Next.js"}, {name:"Typescript"}, {name:"Node.js"},{name:"Express"},{name:"SMTP"},],
+    image:'/assets/work/2.png',
     live:"",
-    github:""
+    github:"https://github.com/Sidd2712/Walmart-Kiosk"
   },
   {
     num:'02',
-    category:'frontend',
+    category:'Full Stack',
     title: 'Amazon Clone',
-    description:'',
-    stack:[{name:"ReactJs"}, {name:"NodeJs"}, {name:"Firebase"},],
-    image:'/assets/work/thumb1.png',
+    description:'A full-stack e-commerce app built with React, Firebase, PostCSS, and Stripe for payments, featuring user authentication, product browsing, and a responsive design for seamless shopping.',
+    stack:[{name:"ReactJs"}, {name:"Google Authenticator"}, {name:"Firebase"},],
+    image:'/assets/work/amazon-project.png',
     live:"https://clone-16a98.web.app/",
     github:"https://github.com/Sidd2712/Amazon-Clone"
   },
   {
     num:'03',
-    category:'frontend',
-    title: 'Rock, Paper and Scisors',
-    description:'html, css, javascriptsdfghj',
-    stack:[{name:"HTML5"}, {name:"CSS 3"}, {name:"Javascript"},],
-    image:'/assets/work/thumb1.png',
+    category:'Full Stack',
+    title: 'ToeToys',
+    description:'A modern shoe sales platform using TypeScript, Next.js, and Tailwind CSS. Features include responsive design, cart/wishlist options, and the latest collections. Frontend is complete; backend development is ongoing.',
+    stack:[{name:"Next.js"}, {name:"Typescript"}, {name:"Tailwind CSS"},],
+    image:'/assets/work/3.png',
     live:"",
     github:""
   },
@@ -55,8 +55,8 @@ const Work = () => {
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
           <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
             <div className='flex flex-col gap-[30px] h-[50%]'>
-              <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>
-                {project.num}
+              <div className='text-6xl leading-none font-extrabold text-transparent text-outline'>
+                {project.num} {project.title}
               </div>
               <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
                 {project.category} project
@@ -76,7 +76,7 @@ const Work = () => {
               </ul>
             <div className='border border-white/20'></div>
             <div className='flex items-center gap-4'>
-              <Link href={project.live}>
+              <Link href={project.live} target='blank'>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
                     <TooltipTrigger className='w-[70px]h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -88,7 +88,7 @@ const Work = () => {
                   </Tooltip>
                 </TooltipProvider>
               </Link>
-              <Link href={project.github}>
+              <Link href={project.github} target='blank'>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
                     <TooltipTrigger className='w-[70px]h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>

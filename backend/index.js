@@ -27,7 +27,7 @@ const Submission = require('./models/Submission');
 app.post('/submit', async (req, res) => {
   try {
     const { firstName, lastName, email, phone, service, message } = req.body;
-    console.log('Received data:', req.body);
+    
 
     const newSubmission = new Submission({
       firstName,

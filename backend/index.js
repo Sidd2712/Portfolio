@@ -12,6 +12,7 @@ app.use(cors(
   {
     origin: ["https://siddharthportfolio.vercel.app"],
     methods:["GET","POST"],
+    credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
   }
 ));

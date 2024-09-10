@@ -89,12 +89,13 @@ const Contact = () => {
       service: value
     });
   };
+  axios.defaults.withCredentials=true;
 
   const handleSubmit = async (e) => {
     e?.preventDefault();
     console.log('form data: ', formData)
     try {
-      const response = await axios.post('http://localhost:5000/submit', formData);
+      const response = await axios.post('https://sidportfolio-api.vercel.app/submit', formData);
       alert('Form submitted successfully');
       setFormData(initialFormData);
     } catch (error) {

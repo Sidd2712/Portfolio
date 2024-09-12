@@ -109,7 +109,7 @@ const Contact = () => {
           <div className='xl:w-[54%] order-2 xl:order-none'>
             <form action="\" className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl' onSubmit={handleSubmit}>
               <h3 className='text-4xl text-accent'>Let&apos;s work together</h3>
-              <p className='text-white/60'>lores ipsum generator as a sdgl alsdlghd lh</p>
+              <p className='text-white/60'>Have any questions or want to get in touch? Fill out the form below, and I'll get back to you as soon as possible!</p>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <Input type="text" name='firstName' placeholder="Firstname" value={formData.firstName} onChange={handleChange}/>
                 <Input type="text" name='lastName' placeholder="Lastname" value={formData.lastName} onChange={handleChange}/>

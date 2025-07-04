@@ -11,24 +11,40 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 
 const projects=[
   {
-    num:'01',
-    category:'frontend',
-    title: 'Your Store Kiosk',
-    description:'A smart in-store shopping solution where users can create a shopping list, receive aisle numbers via email, and manage a wishlist. Built to enhance the future of retail, it enables faster in-store navigation and checkout, ensuring quicker and more efficient services.',
-    stack:[{name:"Next.js"}, {name:"Typescript"}, {name:"Node.js"},{name:"Express"},{name:"SMTP"},],
-    image:'/assets/work/2.png',
-    live:"",
-    github:"https://github.com/Sidd2712/Walmart-Kiosk"
+    num: '01',
+    category: 'FullStack',
+    title: 'File Sharing App',
+    description: 'A full-stack file-sharing platform that enables authenticated users to upload PDF, DOCX, and image files with automatic metadata extraction. It generates shortened, shareable download links using nanoid and allows users to optionally send those links via email. Files have customizable expiry durations, and a cron job automatically deletes expired files to maintain storage efficiency and system performance. User authentication ensures that only verified users can share files securely.',
+    stack: [
+      { name: "Node.js" },
+      { name: "Express" },
+      { name: "MongoDB" },
+      { name: "Multer" },
+      { name: "Cloudinary" },
+      { name: "nanoid" },
+      { name: "Node-cron" },
+      { name: "SMTP" },
+      { name: "React.js"}
+    ],
+    image: '/assets/work/2.png',
+    live: "https://sharing-app-silk.vercel.app/",
+    github: "https://github.com/Sidd2712/Sharing-App" 
   },
   {
-    num:'02',
-    category:'Full Stack',
-    title: 'Amazon Clone',
-    description:'A full-stack e-commerce app built with React, Firebase, PostCSS, and Stripe for payments, featuring user authentication, product browsing, and a responsive design for seamless shopping.',
-    stack:[{name:"ReactJs"}, {name:"Google Authenticator"}, {name:"Firebase"},],
-    image:'/assets/work/amazon-project.png',
-    live:"https://clone-16a98.web.app/",
-    github:"https://github.com/Sidd2712/Amazon-Clone"
+    num: '02',
+    category: 'fullstack',
+    title: 'URL Shortener Web App',
+    description: 'A full-stack URL shortener application where users can input long URLs and get shortened versions that redirect to the original site. It features input sanitization, rate limiting, and MongoDB persistence, with a clean Tailwind CSS interface for smooth interaction.',
+    stack: [
+      { name: "React.js" },
+      { name: "CSS" },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "MongoDB" }
+    ],
+    image: '/assets/work/3.png',
+    live: "", // Add your live link once deployed
+    github: "https://github.com/Sidd2712/url_shortner"
   },
   {
     num:'03',
@@ -39,6 +55,26 @@ const projects=[
     image:'/assets/work/3.png',
     live:"",
     github:""
+  },
+  {
+    num:'04',
+    category:'frontend',
+    title: 'Your Store Kiosk',
+    description:'A smart in-store shopping solution where users can create a shopping list, receive aisle numbers via email, and manage a wishlist. Built to enhance the future of retail, it enables faster in-store navigation and checkout, ensuring quicker and more efficient services.',
+    stack:[{name:"Next.js"}, {name:"Typescript"}, {name:"Node.js"},{name:"Express"},{name:"SMTP"},],
+    image:'/assets/work/2.png',
+    live:"",
+    github:"https://github.com/Sidd2712/Walmart-Kiosk"
+  },
+  {
+    num:'05',
+    category:'Full Stack',
+    title: 'Amazon Clone',
+    description:'A full-stack e-commerce app built with React, Firebase, PostCSS, and Stripe for payments, featuring user authentication, product browsing, and a responsive design for seamless shopping.',
+    stack:[{name:"ReactJs"}, {name:"Google Authenticator"}, {name:"Firebase"},],
+    image:'/assets/work/amazon-project.png',
+    live:"https://clone-16a98.web.app/",
+    github:"https://github.com/Sidd2712/Amazon-Clone"
   },
 ]
 

@@ -56,26 +56,6 @@ const projects=[
     live:"",
     github:""
   },
-  {
-    num:'04',
-    category:'frontend',
-    title: 'Your Store Kiosk',
-    description:'A smart in-store shopping solution where users can create a shopping list, receive aisle numbers via email, and manage a wishlist. Built to enhance the future of retail, it enables faster in-store navigation and checkout, ensuring quicker and more efficient services.',
-    stack:[{name:"Next.js"}, {name:"Typescript"}, {name:"Node.js"},{name:"Express"},{name:"SMTP"},],
-    image:'/assets/work/2.png',
-    live:"",
-    github:"https://github.com/Sidd2712/Walmart-Kiosk"
-  },
-  {
-    num:'05',
-    category:'Full Stack',
-    title: 'Amazon Clone',
-    description:'A full-stack e-commerce app built with React, Firebase, PostCSS, and Stripe for payments, featuring user authentication, product browsing, and a responsive design for seamless shopping.',
-    stack:[{name:"ReactJs"}, {name:"Google Authenticator"}, {name:"Firebase"},],
-    image:'/assets/work/amazon-project.png',
-    live:"https://clone-16a98.web.app/",
-    github:"https://github.com/Sidd2712/Amazon-Clone"
-  },
 ]
 
 const Work = () => {

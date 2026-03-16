@@ -1,11 +1,28 @@
 "use client";
 import React from 'react'
-import { FaHtml5, FaNodeJs, FaNode, FaCss3, FaJs, FaFigma, FaReact } from 'react-icons/fa';
-import {SiTailwindcss, SiExpress, SiNextdotjs, SiAdobeillustrator, SiMongodb} from 'react-icons/si';
+import { 
+  FaHtml5, 
+  FaCss3, 
+  FaJs, 
+  FaReact, 
+  FaNodeJs, 
+  FaPython, 
+  FaDatabase, 
+  FaGithub 
+} from 'react-icons/fa';
+
+import { 
+  SiExpress, 
+  SiMongodb, 
+  SiFastapi, 
+  SiCplusplus, 
+  SiTypescript, 
+  SiPytorch 
+} from 'react-icons/si';
 
 const about={
   title:"About Me",
-  description: "Lores Ipsum asdfgh lkjhgf dfhh ar gdf h hdf hg rf hg g  t hh ",
+  description:"I am Siddharth Goyal, a passionate software developer with expertise in front-end and full-stack development. With a strong foundation from ABV-IIITM Gwalior, I have developed a range of skills in technologies like React.js, Next.js, and Node.js. My experience includes internships at Qwings and Rarity Metrix, where I enhanced user interfaces, optimized performance, and secured applications. As a freelancer, I developed a full-stack e-commerce site for Punjab Desi Ghee, integrating Razorpay for seamless payments. Currently, I am building a modern shoe sales platform for ToeToys using Next.js and GraphQL. I thrive in collaborative environments and am dedicated to delivering high-quality, impactful software solutions.",
   info:[
     {
       fieldName:'Name',
@@ -27,36 +44,36 @@ const about={
       fieldName:'Email',
       fieldValue:"siddharth.2727goyal@gmail.com",
     },
-    {
-      fieldName:'Freelance',
-      fieldValue:"Available",
-    },
-    {
-      fieldName:'Languages',
-      fieldValue:"English",
-    },
   ]
 }
 
 const experience={
   icon:"/assets/resume/badge.svg",
   title:"My Experience",
-  description:"I am Siddharth Goyal, a passionate software developer with expertise in front-end and full-stack development. With a strong foundation from ABV-IIITM Gwalior, I have developed a range of skills in technologies like React.js, Next.js, and Node.js. My experience includes internships at Qwings and Rarity Metrix, where I enhanced user interfaces, optimized performance, and secured applications. As a freelancer, I developed a full-stack e-commerce site for Punjab Desi Ghee, integrating Razorpay for seamless payments. Currently, I am building a modern shoe sales platform for ToeToys using Next.js and GraphQL. I thrive in collaborative environments and am dedicated to delivering high-quality, impactful software solutions.",
   items:[
+    {
+      company:"Ayudo",
+      position:"Software Engineer Intern",
+      duration:"Dec 2025 - Feb 2026",
+      location: "Noida",
+    },
     {
       company:"Qwings",
       position:"React Developer",
       duration:"June 2023 - September 2023",
+      location: "Remote",
     },
     {
       company:"Rarity Metrix",
       position:"Full Stack Developer",
       duration:"October 2023 - December 2023",
+      location: "Remote",
     },
     {
-      company:"E-commerce Startup",
+      company:"Friendigos", 
       position:"Freelance Web Developer",
       duration:"June 2024",
+      location: "Remote",
     },
   ]
 };
@@ -64,7 +81,6 @@ const experience={
 const education={
   icon:"/assets/resume/cap.svg",
   title:"My Education",
-  description:"I am Siddharth Goyal, a passionate software developer with expertise in front-end and full-stack development. With a strong foundation from ABV-IIITM Gwalior, I have developed a range of skills in technologies like React.js, Next.js, and Node.js. My experience includes internships at Qwings and Rarity Metrix, where I enhanced user interfaces, optimized performance, and secured applications. As a freelancer, I developed a full-stack e-commerce site for Punjab Desi Ghee, integrating Razorpay for seamless payments. Currently, I am building a modern shoe sales platform for ToeToys using Next.js and GraphQL. I thrive in collaborative environments and am dedicated to delivering high-quality, impactful software solutions.",
   items:[
     {
       institution:"ABV-IIITM Gwalior",
@@ -74,37 +90,65 @@ const education={
   ]
 };
 
-const skills={
-  title:"My Skills",
-  description: "My skills",
-  skillList:[
+const skills = {
+  title: "My Skills",
+  description: "A comprehensive toolkit spanning frontend design, backend architecture, and machine learning, with a strong foundation in core CS concepts and distributed systems.",
+  skillList: [
     {
-      icon:<FaHtml5/>,
-      name:"HTML 5",
+      icon: <SiCplusplus />,
+      name: "C++",
     },
     {
-      icon:<FaCss3/>,
-      name:"CSS 3",
+      icon: <FaJs />,
+      name: "JavaScript",
     },
     {
-      icon:<FaJs/>,
-      name:"JavaScript",
+      icon: <SiTypescript />,
+      name: "TypeScript",
     },
     {
-      icon:<FaReact/>,
-      name:"React",
+      icon: <FaPython />,
+      name: "Python",
     },
     {
-      iocn:<SiNextdotjs/>,
-      name:"next.js",
+      icon: <FaReact />,
+      name: "React.js",
     },
     {
-      icon:<SiTailwindcss/>,
-      name:"Tailwind CSS",
+      icon: <FaNodeJs />,
+      name: "Node.js",
     },
     {
-      icon:<FaFigma/>,
-      name:"Figma",
+      icon: <SiExpress />,
+      name: "Express.js",
+    },
+    {
+      icon: <SiFastapi />,
+      name: "FastAPI",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <FaDatabase />,
+      name: "SQL & DBMS",
+    },
+    {
+      icon: <SiPytorch />,
+      name: "PyTorch",
+    },
+    {
+      icon: <FaGithub />,
+      name: "CI/CD & Git",
+    },
+    {
+      icon: <FaHtml5 />,
+      name: "HTML 5",
+    },
+    {
+      icon: <FaCss3 />,
+      name: "CSS 3",
     }
   ]
 }
@@ -141,7 +185,14 @@ const Resume = () => {
                           <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>{item.position}</h3>
                           <div className='flex items-center gap-3'>
                             <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
-                            <p className='text-white/60'>{item.company}</p>
+                            <p className='text-white/60'>
+                              {item.company}
+                              {item.location && (
+                                <span className="text-white/40 text-sm ml-2">
+                                  • {item.location}
+                                </span>
+                              )}
+                            </p>
                           </div>
                         </li>
                       )
@@ -208,8 +259,8 @@ const Resume = () => {
                   {about.info.map((item,index)=>{
                     return(
                       <li key={index} className='flex items-center justify-center xl:justify-start'>
-                        <span className='text-white/60'>{item.fieldName}</span>
-                        <span className='text-xl'>{item.fieldValue}</span>
+                        <span className='text-white/60'>{item.fieldName}: </span>
+                        <span className='text-xl ml-4'>{item.fieldValue}</span>
                       </li>
                     )
                   })}
